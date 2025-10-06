@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="highlight-heading mb-3">Mark Habit as Done</h2>
+    
+    <p style="color: #d6e8e9  ; font-size:18px; font-weight:bold;">
+        Are you sure you want to mark "<strong>{{ habit.name }}</strong>" as done for today ({{ today|date:"F j, Y" }})?
+    </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Yes, Mark as Done ✅</button>
+        <a href="{% url 'habit_list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
