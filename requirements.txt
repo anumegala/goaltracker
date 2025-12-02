@@ -1,0 +1,4 @@
+Django==2.2.7
+# Add other packages your project needs here, for example:
+# mysqlclient==2.1.1  # if using MySQL on PythonAnywhere
+# gunicorn==20.1.0    # not required on PythonAnywhere
